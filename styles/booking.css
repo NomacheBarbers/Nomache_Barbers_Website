@@ -1,0 +1,121 @@
+
+body {font-family: Verdana, sans-serif;}
+
+/* Month header */
+.month {
+  padding: 10px 40px;
+  margin-bottom: 1rem;
+}
+
+
+.monthp {
+  color: black;
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  text-overflow: initial;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bolder;
+  z-index: 1;
+  position:relative;
+  top: 4.5rem;
+  pointer-events: none;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  padding-top: 10px;
+  margin-right: 10rem;
+  width: 100px;
+  height: 60px;
+  margin-bottom: 1rem;
+  border-radius: 60px;
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 0.5rem;
+}
+
+/* Next button */
+.month .next {
+  padding-top: 10px;
+  margin-left: 10rem;
+  width: 100px;
+  height: 60px;
+  border-radius: 60px;
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 0.5rem;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin-bottom: 1px;
+  padding: 4px 0px;
+  background-color:#ddd;
+  width: 600px;
+}
+
+.weekdays li {
+  display: inline-block;
+  margin-left: 1px;
+  color: #666;
+  word-spacing: 3rem;
+
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 1px;
+  max-width: 600px;
+  display:block;
+  left: center;
+
+}
+
+
+.day_button{
+    width: 50px;
+    height: 50px;
+    font-size: large;
+    margin: 1rem;
+}
+
+.non_day_button{
+    width: 50px;
+    height: 50px;
+    font-size: large;
+    margin: 1rem;
+    pointer-events: none;
+    color: #ffffff41;
+    border-color: #ffffff41;
+    
+}
+
+.empty_button{
+    width: 50px;
+    height: 50px;
+    font-size: large;
+    margin: 1rem;
+    visibility: hidden;
+}
+
+
+.calandar{
+    display:flex;
+}
+
+
+.times_button{
+    width: 80px;
+    height: 50px;
+    font-size: large;
+}
+
+.times{
+    max-width: 300px;
+    display:grid;
+}
