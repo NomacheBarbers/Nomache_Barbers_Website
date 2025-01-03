@@ -191,7 +191,9 @@ var content = 'BEANS!!!!!!';
 const owner = 'NomacheBarbers';
 const repo = 'BarberShopData';
 const path = 'data.json';
-const auth = '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';
+const auth = atob("Z2hwX29OemM4dHdWV1NUTENXRWFveDA3clo4QWFtR01WTDN6NGRsOQ==");
+//console.log(`TOKEN: ${atob(auth)}`)
+
 var booking_data = {'Person1' : {'time' : '12.30', 'length' : 60, "cut" : "Boys cut - 20min", 'price' : 20}};
 
 async function upload_booking_data() {

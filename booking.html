@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="Cross-Origin-Opener-Policy" content="same-origin-allow-popups">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
@@ -12,7 +15,13 @@
     <link href="styles/booking.css" rel="stylesheet" type="text/css"/>
 
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 
+    <script>
+      function handleCredentialResponse(response) {
+          decodeJwtResponse(response.credential);
+      }
+  </script>
 
     <script type="module">
       import { Octokit } from "https://esm.sh/@octokit/rest";
@@ -24,10 +33,7 @@
 
   </head>
     <body>
-
         <div class = 'background'></div>
-
-        
     <main>
 
       <meta name="google-signin-client_id" content="136068126104-vttc1k20f36cqg6q4el9q5atba4lsv5t.apps.googleusercontent.com">
@@ -40,7 +46,6 @@
         <button class = "phone_button" >Phone</button>
         <button class = "book_button" onclick = "open_booking()">Book</button>
       </e>
-
 
     </main>
 
