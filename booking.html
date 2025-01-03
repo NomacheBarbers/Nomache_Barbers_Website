@@ -19,19 +19,23 @@
 
     <script type="module">
       import { Octokit } from "https://esm.sh/@octokit/rest";
+      import { createBasicAuth } from "https://esm.sh/@octokit/auth-basic";
+      
+
       const message = 'testing';
       var content = 'BEANS!!!!!!';
       const OWNER_NAME = 'NomacheBarbers';
       const REPO_NAME = 'BarberShopData';
       const FILE_PATH = 'data.json';
-      const auth = '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';
+      const auth = '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';
       const branch = 'master';
 
       const octokit = new Octokit({
-              auth: `${auth}`
+            auth: auth
           });
 
-      console.log(octokit.repos);
+
+
 
       async function getFileContent(owner, repo, filePath, ref = 'master') {
       try {
@@ -53,9 +57,9 @@
 }
 
 // Usage example
-getFileContent('NomacheBarbers', 'BarberShopData', 'data.json');
+//getFileContent('NomacheBarbers', 'BarberShopData', 'data.json');
 
-window.get_booking_data = getFileContent;
+window.get_booking_data2 = getFileContent;
     </script>
     
     </script>
@@ -123,7 +127,7 @@ window.get_booking_data = getFileContent;
 
     </div>
 
-    <button onclick = "window.get_booking_data('NomacheBarbers', 'BarberShopData', 'data.json');">TEST SEND!</button>
+    <button onclick = "window.get_booking_data2('NomacheBarbers', 'BarberShopData', 'data.json');">TEST SEND!</button>
     
     <h1 id = 'total_string'>Date: None Selected</h1>
 </center>
